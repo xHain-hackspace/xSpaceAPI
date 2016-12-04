@@ -3,8 +3,12 @@
    "space":"xHain",
    "logo":"https://x-hain.de/images/global/xhain_logo.svg",
    "url":"https://x-hain.de",
+   "dynamic_generator": {
+     "counter": 0,
+     "generated_utc_time": 0
+   },
    "location":{
-      "address":"xHain hack+makespace, Grünberger Straße 14, 10243 Berlin, Germany",
+      "address":"xHain hack+makespace, Gruenberger Strasse 14, 10243 Berlin, Germany",
       "lon":52.512815,
       "lat":13.4493919
    },
@@ -52,6 +56,11 @@
          {
             "value":55,
             "unit":"%",
+            "location":"Front door"
+         },
+         {
+            "value":55,
+            "unit":"%",
             "location":"Lab"
          }
       ],
@@ -59,6 +68,13 @@
          {
             "value":23
          }
+      ],
+      "co2":[
+        {
+            "value":3225,
+            "unit":"ppm",
+            "location":"Lab"
+        }
       ]
    }
 }
