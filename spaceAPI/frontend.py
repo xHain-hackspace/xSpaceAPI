@@ -70,6 +70,13 @@ def prepareRedisEntries():
     myRedis.setex("xHain/member/count",                100, 23   )
     myRedis.setex("xHain/server/spaceapi/callcounter", 100, 0    )
 
+@server.route('/check', methods=['GET'])
+def check():
+    data = {}
+    data['Serverstatus'] = True
+    data['Callcounter']  = myRedis.get("xHain/server/spaceapi/callcounter")
+    return jsonify(data)
+
 @server.route('/', methods=['GET'])
 def getSpaceAPI():
     mySpaceObject = getDefaultObject()
