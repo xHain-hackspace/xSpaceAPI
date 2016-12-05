@@ -1,6 +1,7 @@
 # coding=utf-8
 
 import os
+import sys
 import json
 import time
 import redis
@@ -52,6 +53,8 @@ def readConfig():
     if update:
         with open("config.ini", 'w') as f:
             myConfig.write(f)
+            print "Please edit the config file"
+            sys.exit()
 
     return myConfig
 
