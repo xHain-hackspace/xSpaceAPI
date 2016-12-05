@@ -103,4 +103,4 @@ myRedis  = redis.StrictRedis(host     = myConfig.get("REDIS", "ServerAddress"),
                              password = myConfig.get("REDIS", "Password"),
                              db       = 0)
 prepareRedisEntries() # Dummy entries, remove as soon as infrastructure is in place
-server.run(debug=False, port=myConfig.get("WEBSERVER", "Port"))
+server.run(debug=False, host="0.0.0.0", port=myConfig.get("WEBSERVER", "Port"))
